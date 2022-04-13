@@ -72,7 +72,7 @@ for time in {00..96..3};
 	do
 		filename=gfs.t00$filecon$time
 		serverfilename=gfs.t00$filecon$(printf "%03d" "${time#0}")
-		url="http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p50.pl?file=$serverfilename&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&leftlon=0&rightlon=360&toplat=90&bottomlat=-90&dir=%2Fgfs."$today"00"
+		url="https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p50.pl?file=$serverfilename&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&leftlon=0&rightlon=360&toplat=90&bottomlat=-90&dir=%2Fgfs."$today"%2F00%2Fatmos"
 		echo "--> Downloading $filename:"
 		ret=1
 		tries=1
